@@ -1,4 +1,4 @@
-## Rome
+## /dev/messages
 
 - Act like a linux FD, send a message over a transportation protocol (HTTP in this case)
 - Dead simple API, send a message to someone, poll to receive messages, see history between someone, schedule messages to go out. That's it.

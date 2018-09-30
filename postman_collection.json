@@ -1,0 +1,159 @@
+{
+  "info": {
+    "_postman_id": "58002384-8a82-4e6e-86a2-00485aa5bb4e",
+    "name": "/dev",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Send Message",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"from\": \"sean\",\n\t\"message\": \"waduuup\"\n}"
+        },
+        "url": {
+          "raw": "{{host}}/send/hunter",
+          "host": ["{{host}}"],
+          "path": ["send", "hunter"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Received Messages",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "{{host}}/messages/received/hunter",
+          "host": ["{{host}}"],
+          "path": ["messages", "received", "hunter"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Sent Messages",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "{{host}}/messages/sent/hunter",
+          "host": ["{{host}}"],
+          "path": ["messages", "sent", "hunter"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Conversation with someone else",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "{{host}}/messages/conversation/hunter/sean",
+          "host": ["{{host}}"],
+          "path": ["messages", "conversation", "hunter", "sean"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Scheduled Message",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"from\": \"hunter\",\n\t\"message\": \"This is a scheduled message\",\n\t\"deliveryTime\": \"2018-09-30T13:35:00\"\n}"
+        },
+        "url": {
+          "raw": "{{host}}/messages/scheduled/sean",
+          "host": ["{{host}}"],
+          "path": ["messages", "scheduled", "sean"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Scheduled Messages by Sender",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "{{host}}/messages/scheduled/from/hunter",
+          "host": ["{{host}}"],
+          "path": ["messages", "scheduled", "from", "hunter"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Scheduled Messages by Recipient",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "{{host}}/messages/scheduled/to/sean",
+          "host": ["{{host}}"],
+          "path": ["messages", "scheduled", "to", "sean"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Scheduled Message By ID",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "{{host}}/messages/scheduled/5",
+          "host": ["{{host}}"],
+          "path": ["messages", "scheduled", "5"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Scheduled Message by ID",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"newMessage\": \"I'm thinking of changing my name to YE\"\n}"
+        },
+        "url": {
+          "raw": "{{host}}/messages/scheduled/7",
+          "host": ["{{host}}"],
+          "path": ["messages", "scheduled", "7"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
